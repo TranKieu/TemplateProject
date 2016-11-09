@@ -24,8 +24,11 @@ Dùng để tự động dịch SCSS ra CSS
 
 # .bower.json
 Để sử dụng được Bower: 
-1. bower install
-2. bower list --path >fi.txt : lấy src dependencies
+
+1. bower install 
+
+2. bower list --path >file.txt : lấy src dependencies
+
 ```json
 {
   "name": "project",
@@ -48,6 +51,7 @@ Dùng để tự động dịch SCSS ra CSS
 }
 ```
 dependencies : 
+
 1. Version thay vào khi dùng.
 2. Thêm các framework mình cần = bower search frName
 
