@@ -1,6 +1,6 @@
 {
     "path": {
-        "sass/main.scss": {
+        "scss/style.scss": {
             "sass.enabled": true,
             "sass.options": {
                 "outputDir": "../css/",
@@ -8,10 +8,6 @@
                 "sourceComments": "map",
                 "outputStyle": "nested"
             }
-        },
-        "sass/include/*.scss": {
-            "sass.enabled": false,
-            "linting.collapsed": false
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿# .bower.json
+# .bower.json
 Dùng để tự động dịch SCSS ra CSS
 ```json
 { "path": {
-        "sass/main.scss": {
+        "scss/main.scss": {
             "sass.enabled": true,
             "sass.options": {
                 "outputDir": "../css/",
