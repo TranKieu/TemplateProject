@@ -56,11 +56,11 @@ dependencies :
 2. Thêm các framework mình cần = bower search frName
 
 # .bowerrc
-Chỉ đường đẫn cho bower lưu xuống đâu => lưu ngay ngoài root
+Chỉ đường đẫn cho bower lưu xuống đâu => lưu vào thư mục bower
 
 ```json
 {
-"directory": ""
+"directory": "bower"
 }
 ```
 
