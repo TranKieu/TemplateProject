@@ -7,7 +7,7 @@ Dùng để tự động dịch SCSS ra CSS
             "sass.options": {
                 "outputDir": "../css/",
                 "imagePath": null,
-                "sourceComments": "map",
+                "sourceComments": false,
                 "outputStyle": "nested"
             }
         },

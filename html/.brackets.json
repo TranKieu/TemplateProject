@@ -5,7 +5,7 @@
             "sass.options": {
                 "outputDir": "../css/",
                 "imagePath": null,
-                "sourceComments": "map",
+                "sourceComments": false,
                 "outputStyle": "nested"
             }
         }
