@@ -22,13 +22,14 @@ Dùng để tự động dịch SCSS ra CSS
 2. "sourceComments" = false(default) VS true 
 3. sass/include/ = các file được include vào main và ko cần compress
 
-# .bower.json
+# bower.json
 Để sử dụng được Bower: 
 
 1. bower install 
 
 2. bower list --path >file.txt : lấy src dependencies
 
+3. bower cache clean => Xóa Cache nếu muốn
 ```json
 {
   "name": "project",

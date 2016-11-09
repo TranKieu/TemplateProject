@@ -13,7 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "bootstrap": "~3.3.5"
+    "jQuery": "^3.1.1",
+    "bootstrap": "^3.3.7"
   }
 }
