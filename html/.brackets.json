@@ -5,9 +5,22 @@
             "sass.options": {
                 "outputDir": "../css/",
                 "imagePath": null,
-                "sourceComments": false,
+                "sourceComments": true,
                 "outputStyle": "nested"
             }
         }
+    },
+	
+    "bb.beautify.onSave": true,
+    "path": {
+        "**min**": {
+            "bb.beautify.onSave": false
+        }
+    },
+    "language": {
+        "html": {
+            "bb.beautify.onSave": false
+        }
     }
+
 }

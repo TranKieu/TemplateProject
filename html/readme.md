@@ -1,4 +1,4 @@
-# .bower.json
+# .brackets.json
 Dùng để tự động dịch SCSS ra CSS
 ```json
 { "path": {
