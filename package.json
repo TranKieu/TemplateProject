@@ -4,10 +4,11 @@
   "description": "",
   "main": "./src/index.ts",
   "scripts": {
-    "build": " npm run clean && npm run compiler && npm run copy ",
+    "build": " npm run clean && npm run compiler && npm run copy1 && npm run copy2",
     "compiler": "tsc -p .",
     "clean": "shx rm -rf bin",
-    "copy": "shx cp -R src/templates bin/"
+    "copy1": "shx cp -R src/templates bin/",
+    "copy2": "shx cp -R src/gulp.templates bin/"
   },
   "bin": {
     "temp-g": "./bin/index.js"

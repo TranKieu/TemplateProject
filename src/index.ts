@@ -3,6 +3,7 @@ import program from 'commander';
 import chalk from 'chalk';
 
 import { createTemplate } from './commands/new.command';
+import { createGulpTemplate } from './commands/gulp.command';
 const VERSION = '1.0.0';
 const NAME = 'temp-g';
 
@@ -20,6 +21,13 @@ program
     .alias('n')
     .description('Create new Templates')
     .action((project) => createTemplate(project));
+
+program
+    .command('gulpnew <project>')
+    .alias('n')
+    .description('Create new Templates with gulpfile')
+    .action((project) => createGulpTemplate(project));
+
 
 program.parse(process.argv);
 
