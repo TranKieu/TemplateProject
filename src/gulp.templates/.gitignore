@@ -3,4 +3,5 @@ package-lock.json
 node_modules/
 dist/
 .evn
+src/assets/css/
 bin/
