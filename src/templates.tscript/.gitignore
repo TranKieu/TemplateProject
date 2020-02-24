@@ -1,0 +1,8 @@
+package-lock.json
+.vscode/
+node_modules/
+dist/
+dev-serve/
+.evn
+src/assets/css/
+
