@@ -23,7 +23,8 @@ class TSPackage {
     devDependencies = {
         "nodemon": "latest",
         "ts-node": "latest",
-        "typescript": "latest"
+        "typescript": "latest",
+        "@types/node": "latest"
     }
 };
 

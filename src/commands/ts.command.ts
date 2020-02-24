@@ -31,6 +31,7 @@ async function createPackage(projectDir: string) {
     ts.devDependencies["nodemon"] = (await lastest('nodemon')) as string;
     ts.devDependencies["ts-node"] = (await lastest('ts-node')) as string;
     ts.devDependencies["typescript"] = (await lastest('typescript')) as string;
+    ts.devDependencies["@types/node"] = (await lastest('@types/node')) as string;
 
 
     // ghi file package
