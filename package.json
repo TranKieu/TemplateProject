@@ -4,12 +4,13 @@
     "description": "",
     "main": "./src/index.ts",
     "scripts": {
-        "build": " npm run clean && npm run compiler && npm run copy1 && npm run copy2 && npm run copyts",
+        "build": " npm run clean && npm run compiler && npm run mk && npm run cp-wp && npm run cp-gulp && npm run cp-ts",
         "compiler": "tsc -p .",
         "clean": "shx rm -rf bin",
-        "copy1": "shx cp -R src/templates bin/",
-        "copy2": "shx cp -R src/gulp.templates bin/",
-        "copyts": "shx cp -R src/templates.tscript bin/"
+        "mk": "shx mkdir bin/templates",
+        "cp-wp": "shx cp -R src/templates/wp-project bin/templates/",
+        "cp-gulp": "shx cp -R src/templates/gulp-project bin/templates/",
+        "cp-ts": "shx cp -R src/templates/tscript-project bin/templates/"
     },
     "bin": {
         "create": "./bin/index.js"

@@ -4,6 +4,8 @@ import { isExists, copyDir, writeFile } from './utils/file';
 import { lastest } from './utils/latestversion';
 import { wp } from './configfile/wp.package';
 
+const templatesPath = '../templates/wp-project';
+
 export const createTemplate = async (name: string) => {
     // copy vao la xong
     if (await isExists(name)) {
@@ -15,7 +17,7 @@ export const createTemplate = async (name: string) => {
 
     // copy Templates
     console.log(chalk.green.bold('\n\t Copy Templates:'));
-    let srcBackend = path.resolve(__dirname, '../templates');
+    let srcBackend = path.resolve(__dirname, templatesPath);
     await copyDir(srcBackend, name);
     await createPackage(name);
     console.log('\t %s Project ready!\n', chalk.green.bold(name));

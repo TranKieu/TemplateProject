@@ -4,6 +4,8 @@ import { isExists, copyDir, writeFile } from './utils/file';
 import { lastest } from './utils/latestversion';
 import { gulp } from './configfile/gulp.package';
 
+const templatesPath = '../templates/gulp-project';
+
 async function createPackage(projectDir: string) {
 
     gulp.devDependencies['autoprefixer'] = (await lastest('autoprefixer')) as string;
@@ -15,7 +17,9 @@ async function createPackage(projectDir: string) {
     gulp.devDependencies["gulp-rename"] = (await lastest('gulp-rename')) as string;
     gulp.devDependencies["gulp-sass"] = (await lastest('gulp-sass')) as string;
     gulp.devDependencies["gulp-sourcemaps"] = (await lastest('gulp-sourcemaps')) as string;
-    gulp.devDependencies["gulp-terser"] = (await lastest('gulp-terser')) as string;
+    //gulp.devDependencies["gulp-terser"] = (await lastest('gulp-terser')) as string;
+    gulp.devDependencies["gulp-javascript-obfuscator"] =
+        (await lastest('gulp-javascript-obfuscator')) as string;
 
     // ghi file package
     try {
@@ -43,7 +47,7 @@ export const createGulpTemplate = async (name: string) => {
 
     // copy Templates
     console.log(chalk.green.bold('\n\t Copy Templates:'));
-    let srcBackend = path.resolve(__dirname, '../gulp.templates');
+    let srcBackend = path.resolve(__dirname, templatesPath);
     await copyDir(srcBackend, name);
 
     await createPackage(name);
@@ -54,6 +58,6 @@ export const createGulpTemplate = async (name: string) => {
         chalk.red.bold(name),
         chalk.green.bold(" npm install"));
     // install gulp
-    console.log('\t Run command %s  to install Gulp\n',
+    console.log('\t Run command %s  to install Gulp globally\n',
         chalk.green.bold("npm install -g gulp"));
 }

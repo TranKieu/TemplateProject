@@ -27,7 +27,8 @@ class GulpPackage {
         "gulp-rename": "latest",
         "gulp-sass": "latest",
         "gulp-sourcemaps": "latest",
-        "gulp-terser": "latest"
+        //"gulp-terser": "latest",
+        "gulp-javascript-obfuscator": "latest"
     };
 }
 

@@ -8,7 +8,7 @@ const sass = require('gulp-sass'), // Compiler
     autoprefixer = require('autoprefixer'),
     postcss = require('gulp-postcss'),
     sourcemaps = require('gulp-sourcemaps'),
-    minifyJs = require('gulp-terser'),
+    obfuscatorJs = require('gulp-javascript-obfuscator'),
     rename = require('gulp-rename'), // đổi tên như mình muốn
     del = require('del'); // xóa dist cũ đi 
 
@@ -30,8 +30,10 @@ const clean = () => del(['src/assets']);
 // Xử lý Scripts
 const scripts = () => {
     return gulp.src(paths.scripts.src)
-        .pipe(minifyJs())
-        .pipe(rename(function (path) {
+        .pipe(obfuscatorJs({
+            compact: true
+        }))
+        .pipe(rename(function(path) {
             path.basename += ".min";
         }))
         .pipe(gulp.dest(paths.scripts.dest));
@@ -60,7 +62,7 @@ const styles = () => {
 
 // Start browserSync Server
 /* Để lại để biết các gọi Task từ task khác */
-gulp.task('browserSync', function (done) {
+gulp.task('browserSync', function(done) {
     browserSync.init({
         server: "./src"
     });
@@ -76,7 +78,7 @@ gulp.task('clean', clean);
 // CMD chạy: gulp = phải cài global gulp
 gulp.task('default', gulp.series(clean,
     gulp.parallel(styles, scripts), 'browserSync',
-    function () {
+    function() {
         gulp.watch(paths.styles.src, gulp.series(styles, reload));
         gulp.watch(paths.scripts.src, gulp.series(scripts, reload));
         gulp.watch('src/*.html').on('change', browserSync.reload);
