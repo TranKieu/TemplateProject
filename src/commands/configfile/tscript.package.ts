@@ -1,6 +1,6 @@
 
 class TSPackage {
-    name = 'Typescript Start';
+    name = 'typescript-start';
 
     version = "0.0.0";
 

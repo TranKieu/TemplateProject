@@ -1,24 +1,34 @@
 {
-  "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
-    "sourceMap": true,
-    "removeComments": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "alwaysStrict": true,
-    //"strictNullChecks": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": ["es2017", "es7", "dom"],
-    "typeRoots": [
-      "node_modules/@types"
+    "compileOnSave": false,
+    "compilerOptions": {
+
+        "target": "es2017",
+
+        /* tùy môi trường chạy: 'amd', 'system' */
+        "module": "commonjs",
+        /* Vì ES2017 nên cần thêm thư viện  */
+        "lib": ["es2017", "dom"],
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "baseUrl": "./",
+
+        "sourceMap": true,
+        "removeComments": true,
+
+        //"strict": true,
+        "strictNullChecks": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    /* Ko Compiler */
+    "exclude": [
+        "node_modules"
     ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
 }

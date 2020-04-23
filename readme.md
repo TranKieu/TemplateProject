@@ -9,8 +9,8 @@
 
 # devDependencies
 
-1. postcss-loader
-2. autoprefixer
-3. bootstrap
-4. jquery
-5. popper.js
++ new-ts: Backend with TypeScript
+
++ new-gulp: Fontend with scss, html, js 
+
++ new-parcel: Fontend with html, scss, typescript
